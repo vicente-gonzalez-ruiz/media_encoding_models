@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Media-Encoding-Models">Media Encoding Models<a class="anchor-link" href="#Media-Encoding-Models">&#182;</a></h1><p><img src="data/media-encoding-models.png"></p>
+<h1 id="Media-Encoding-Models">Media Encoding Models<a class="anchor-link" href="#Media-Encoding-Models">&#182;</a></h1><p><img src="data/media-encoding-models.png" width=400></p>
 
 </div>
 </div>
@@ -11792,6 +11792,64 @@ picture-rate are available at decoding time.</p>
 <li><p>The decoding of a single layered stream generates a
 reconstruction whose quality is linearly proportional to the amount
 of decoded data.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Multiple-Layer-Coding-(MLC)"><a href="http://eeweb.poly.edu/~yao/EL6123/scalablecoding.pdf">Multiple Layer Coding (MLC)</a><a class="anchor-link" href="#Multiple-Layer-Coding-(MLC)">&#182;</a></h2><ol>
+<li><p>A media encoded in several layers can be decoded to provide (in
+the case of video) different picture-rates (time scalability),
+different resolutions (spatial scalability) and different qualities
+(quality scalability).</p>
+</li>
+<li><p>In some codecs (such as JPEG2000), spatial random access it is
+available ROI (Region-Of-Interest) or WOI (Window-Of-Interest)
+scalability. ROI is used in special imaging, such as
+<a href="http://en.wikipedia.org/wiki/Mammography">mammography</a>. WOI can
+useful in the retrieving of high-resolution video sequences such as
+<a href="http://jhelioviewer.org/linux.html">JHelioviewer</a>.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Multiple-Description-Coding-(MDC)"><a href="http://en.wikipedia.org/wiki/Multiple_description_coding">Multiple Description Coding (MDC)</a><a class="anchor-link" href="#Multiple-Description-Coding-(MDC)">&#182;</a></h2><ol>
+<li><p>Multiple description codecs provides a set of
+partially redundant streams so that the quality of the reconstructions
+improve with the number of descriptions decoded.</p>
+</li>
+<li><p>An example of this type of encoding is the scene segmentation
+(video object coding) provided by
+<a href="http://www.cs.cf.ac.uk/Dave/MM/BSC_MM_CALLER/PDF/12_CM340_MPEG4_VIDEO.pdf">MPEG-4</a>.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Media-simulcast"><a href="{http://en.wikipedia.org/wiki/Simulcast">Media simulcast</a><a class="anchor-link" href="#Media-simulcast">&#182;</a></h2><ol>
+<li><p>In transmission scenarios, a source can store several copies of
+the same media, althought variying the temporal resolution, spatial
+resolution and/or quality.</p>
+</li>
+<li><p>Obviously, this is quite redundant at the source side. However,
+as it will be shown after, adaptive services can be provided with
+this technique, such as in YouTube.</p>
 </li>
 </ol>
 
