@@ -1,35 +1,43 @@
-\title{Data Transmission Models~\cite{transmission-models}}
+\title{Media Encoding Models}
 
 \maketitle
 \tableofcontents
 
-\section{Unicast vs Multicast}
+\section{Single Layer Coding (SLC)}
 \begin{itemize}
-\item A unicast transmission sends data from a single sender to a
-  single receiver.
-\item A multicast transmission sends data from a single server to more
-  than one receiver.
+\item Most audio and image/video codecs generate non-scalable
+  streams. In the case of video, only one quality, resolution and
+  picture-rate are available at decoding time.
+\item The decoding of a single layered stream generates a
+  reconstruction whose quality can be modeled as linearly proportional
+  to the amount of decoded data.
 \end{itemize}
 
-\section{Anycast}
+\section{\href{http://eeweb.poly.edu/~yao/EL6123/scalablecoding.pdf}{Multiple Layer Coding (MLC)}}
 \begin{itemize}
-\item A anycast transmission sends data from a single sender to a
-  single receiver, but like in multicast, the receiver is not controlled
-  by the sender.
+\item A media encoded in several layers can be decoded to provide (in
+  the case of video) different picture-rates (time scalability),
+  different resolutions (spatial scalability) and different qualities
+  (quality scalability).
+\item In some codecs (such as JPEG2000), spatial random access it is
+  available ROI (Region-Of-Interest) or WOI (Window-Of-Interest)
+  scalability. ROI is used in special imaging, such as
+  \href{http://en.wikipedia.org/wiki/Mammography}{mammography}. WOI
+  can useful in the retrieving of high-resolution video sequences such
+  as \href{http://jhelioviewer.org/linux.html}{JHelioviewer}.
 \end{itemize}
 
-\section{Client/server (CS) vs peer-to-peers (P2P models}
+\section{Multiple Description Coding (MDC)}
 \begin{itemize}
-\item In a CS model, the data is sent by a server (or a cluster of
-  servers such as in a CDN (content Delivery Network)) and received
-  directly by one or more clients.
-  \svg{CS_model}{600}
-\item As in the CS model, in a P2P model, the data is sent by one or
-  more server, but the rereivers (peers) are able to relay the data in
-  order to reduce the bandwidth comsumption at the server side.
-  \svg{P2P_model}{400}
-  The P2P model is also called ALM (Application Multicast Model).
+\item Multiple description codecs provides a set of partially
+  redundant streams so that the quality of the reconstructions improve
+  with the number of descriptions decoded.
+\item An example of this type of encoding is the scene segmentation
+  (video object coding) provided by
+  \href{http://www.cs.cf.ac.uk/Dave/MM/BSC_MM_CALLER/PDF/12_CM340_MPEG4_VIDEO.pdf}{MPEG-4}.
 \end{itemize}
+
+\svg{media-encoding-models}{500}
 
 %\section{C/S (Client/Server) model}
 %\begin{itemize}
