@@ -1,0 +1,57 @@
+\title{Data Transmission Models~\cite{transmission-models}}
+
+\maketitle
+\tableofcontents
+
+\section{Unicast vs Multicast}
+\begin{itemize}
+\item A unicast transmission sends data from a single sender to a
+  single receiver.
+\item A multicast transmission sends data from a single server to more
+  than one receiver.
+\end{itemize}
+
+\section{Anycast}
+\begin{itemize}
+\item A anycast transmission sends data from a single sender to a
+  single receiver, but like in multicast, the receiver is not controlled
+  by the sender.
+\end{itemize}
+
+\section{Client/server (CS) vs peer-to-peers (P2P models}
+\begin{itemize}
+\item In a CS model, the data is sent by a server (or a cluster of
+  servers such as in a CDN (content Delivery Network)) and received
+  directly by one or more clients.
+  \svg{CS_model}{600}
+\item As in the CS model, in a P2P model, the data is sent by one or
+  more server, but the rereivers (peers) are able to relay the data in
+  order to reduce the bandwidth comsumption at the server side.
+  \svg{P2P_model}{400}
+  The P2P model is also called ALM (Application Multicast Model).
+\end{itemize}
+
+%\section{C/S (Client/Server) model}
+%\begin{itemize}
+%\item The server sends all data.
+%\end{itemize}
+
+%\section{CDN (Content Distribution Network) model}
+%\fig{300}{CDN_model.png}
+%\begin{itemize}
+%\item Server (and channels) are replicated.
+%\item All servers store the same content (data must be replicated).
+%\end{itemize}
+
+%\section{P2P (Peer-to-Peer) model}
+%\begin{itemize}
+%\item Peers helps the server.
+%\end{itemize}
+
+%\section{IP Multicast model}
+%\fig{300}{IPM_model.png}
+%\begin{itemize}
+%\item The routers do most of the job.
+%\end{itemize}
+
+\bibliography{tecnologias_multimedia}
